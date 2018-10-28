@@ -9,7 +9,7 @@ h3 {margin:0;}
 #imgCamera {float:right;height:16px;width:16px;padding:0.1em 0.5em;}
 #imgLocalStore {float:right;height:16px;width:16px;padding:0.1em 0.5em;}
 
-#exitApp {margin:0.1em;float:right;font-size:0.9em;}
-#getImage {float:left;font-size:0.9em;margin:0 0.5em;margin:0 45%;}
+#exitApp {float:right;font-size:0.9em;margin:0.1em;}
+#getImage {font-size:0.9em;margin:0 40%;}
 
 #theImage {margin:0;padding:0;}
