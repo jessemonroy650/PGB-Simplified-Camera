@@ -12,7 +12,10 @@ var app = {
             function () { navigator.app.exitApp(); },
             false);
         document.getElementById('getImage').addEventListener(app.eventTarget,
-            function () { cameraPlugin.getPicture() },
+            function () {
+                document.getElementById('status').innerHTML = "Getting Camera ... ";
+                cameraPlugin.getPicture()
+            },
             false);
     },
     //
