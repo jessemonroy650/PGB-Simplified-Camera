@@ -19,7 +19,7 @@ var cameraPlugin = {
     getPicture : function () {
         document.getElementById('status').innerHTML = "getting";
         navigator.camera.getPicture(cameraPlugin.onSuccess, cameraPlugin.onFail, 
-            {quality: 50, destinationType: Camera.DestinationType.FILE_URL,
+            {quality: 50, destinationType: Camera.DestinationType.DATA_URL,
              EncodingType: Camera.EncodingType.JPEG}
             );
     },
@@ -27,7 +27,8 @@ var cameraPlugin = {
     onSuccess : function (imageData) {
         document.getElementById('status').innerHTML = "got image " + cameraPlugin.imageSlot;
         var image = document.getElementById(cameraPlugin.imageSlot);
-        image.src = imageData;
+        // image.src = imageData;
+        image.src = "data:image/jpeg;base64," + imageData;
         //document.getElementById('imageData').innerHTML = imageData;
     },
     //
