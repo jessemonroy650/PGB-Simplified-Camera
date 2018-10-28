@@ -28,6 +28,7 @@ var cameraPlugin = {
         document.getElementById('status').innerHTML = "got image " + cameraPlugin.imageSlot;
         var image = document.getElementById(cameraPlugin.imageSlot);
         image.src = "data:image/jpeg;base64," + imageData;
+        document.getElementById('imageData').innerHTML = cameraPlugin.imageSlot;
     },
     //
     onFail : function (message) {
