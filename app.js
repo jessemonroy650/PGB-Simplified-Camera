@@ -20,15 +20,6 @@ var app = {
         //
         app.hook();
         //
-        app.isCameraAvailable  = cameraPlugin.isCameraAvailable();
-        document.getElementById('status1').innerHTML = app.isStorageAvailable;
-        if (app.isCameraAvailable) {
-            cameraPlugin.init('theImage');
-            document.getElementById('imgCamera').className = 'expose';
-        } else {
-            document.getElementById('imgCamera').className = 'hidden';
-        }
-        //
         // check for available storage
         //
         app.isStorageAvailable = localStore.isStorageAvailable('localStorage');
@@ -45,5 +36,14 @@ var app = {
         // - https://videlais.com/2014/08/21/lessons-learned-from-detecting-apache-cordova/
         app.isCordovaApp = (typeof window.cordova !== "undefined");
         app.eventTarget  = 'touchend';
+        //
+        app.isCameraAvailable  = cameraPlugin.isCameraAvailable();
+        document.getElementById('status1').innerHTML = app.isStorageAvailable;
+        if (app.isCameraAvailable) {
+            cameraPlugin.init('theImage');
+            document.getElementById('imgCamera').className = 'expose';
+        } else {
+            document.getElementById('imgCamera').className = 'hidden';
+        }
     }
 }
