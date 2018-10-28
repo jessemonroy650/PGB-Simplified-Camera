@@ -20,6 +20,6 @@
         <!-- PLUGINS PLUGINS -->
         <!-- cordova-plugin-file & cordova-plugin-compat are loaded automatically by Phonegap Build -->
         <plugin name="cordova-plugin-device" spec="~2.0.2" />
-        <plugin name="cordova-plugin-camera" spec="~4.0.3" />
+        <plugin name="cordova-plugin-camera" spec="~2.1.1" />
 
     </widget>

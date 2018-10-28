@@ -2,7 +2,7 @@
 PGB Simplified Example Cordova 'Camera' plugin using cli-6.0.0; less CSS, less Javascript 
 
 
-https://github.com/jessemonroy650/PGB-Simplified-Camera
+https://www.npmjs.com/package/cordova-plugin-camera
 
 ```
 document.addEventListener("deviceready", onDeviceReady, false);
