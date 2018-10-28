@@ -20,6 +20,7 @@ var cameraPlugin = {
         document.getElementById('status').innerHTML = "getting";
         navigator.camera.getPicture(cameraPlugin.onSuccess, cameraPlugin.onFail, 
             {quality: 50, destinationType: Camera.DestinationType.DATA_URL,
+             sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
              EncodingType: Camera.EncodingType.JPEG}
             );
     },
