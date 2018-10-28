@@ -24,6 +24,7 @@ var cameraPlugin = {
     },
     //
     onSuccess : function (imageData) {
+        document.getElementById('status').innerHTML = "got image" + cameraPlugin.imageSlot;
         var image = document.getElementById(cameraPlugin.imageSlot);
         image.src = cameraPlugin.dataURLPrefix + imageData;
     },

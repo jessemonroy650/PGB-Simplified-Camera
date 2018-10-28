@@ -35,6 +35,7 @@ var app = {
     onDeviceReady : function () {
         // - https://videlais.com/2014/08/21/lessons-learned-from-detecting-apache-cordova/
         app.isCordovaApp = (typeof window.cordova !== "undefined");
+        document.getElementById('status0').innerHTML = app.isCordovaApp;
         app.eventTarget  = 'touchend';
         //
         // check for camera
