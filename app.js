@@ -7,6 +7,7 @@ var app = {
 
     //
     hook : function () {
+        new FastClick(document.body);
         document.getElementById('exitApp').addEventListener(app.eventTarget,
             function () { navigator.app.exitApp(); },
             false);
@@ -16,20 +17,19 @@ var app = {
     },
     //
     onDOMContentLoaded : function () {
-        document.getElementById('appVersion').innerHTML   = app.version;
-        //
         app.hook();
+        //
+        document.getElementById('appVersion').innerHTML   = app.version;
         //
         // check for available storage
         //
         app.isStorageAvailable = localStore.isStorageAvailable('localStorage');
-        document.getElementById('status2').innerHTML = app.isStorageAvailable;
+        document.getElementById('status1').innerHTML = app.isStorageAvailable;
         if (app.isStorageAvailable) {
             document.getElementById('imgLocalStore').className = 'expose';
         } else {
             document.getElementById('imgLocalStore').className = 'hidden';
         }
-
     },
     //
     onDeviceReady : function () {
@@ -37,8 +37,10 @@ var app = {
         app.isCordovaApp = (typeof window.cordova !== "undefined");
         app.eventTarget  = 'touchend';
         //
+        // check for camera
+        //
         app.isCameraAvailable  = cameraPlugin.isCameraAvailable();
-        document.getElementById('status1').innerHTML = app.isStorageAvailable;
+        document.getElementById('status2').innerHTML = app.isCameraAvailable;
         if (app.isCameraAvailable) {
             cameraPlugin.init('theImage');
             document.getElementById('imgCamera').className = 'expose';
