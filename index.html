@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class=height100percent>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>PGB Simplified Example 'Camera' plugin</title>
+    <meta http-equiv="Content-Security-Policy" 
+             content="default-src *;  media-src *;
+                      style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
+                      script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="localstore.js"></script>
+    <script type="text/javascript" charset="utf-8" src="camera.js"></script>
+    <script type="text/javascript" charset="utf-8" src="app.js"></script>
+</head>
+<body class=height100percent>
+    <div id=header>
+        <img id=icon src=favicon-48x48.png>
+        PGB Simplified Example 'Camera' plugin
+        <button id=exitApp>Exit</button>
+    </div>
+    <div style="clear:both;">
+    <img title="localstorage available" id="imgLocalStore" src=server.png>
+    <img title="camera available"       id="imgCamera" src=camera.png>
+
+    <h3>v<span id=appVersion></span></h3>
+    <button id=getImage>get&nbsp;image</button>
+
+    </div>
+    <div style="clear:both;">
+    </div>
+
+
+    <div>
+        <b>Status:</b> <span id=status>status unknown</span><br>
+        <b>isCameraAvailable</b> <span id=status1>status unknown</span><br>
+        <b>isStorageAvailable</b> <span id=status2>status unknown</span><br>
+    </div>
+
+    <p />
+
+    <img id=theImage src='' class=hidden >
+
+    <div id=copyright>Created by Jesus Monroy, Jr. &copy; 2018</div>
+</body>
+    <script type="text/javascript">
+    // The 'DOMContentLoaded' event fires before the 'deviceready'
+    document.addEventListener('DOMContentLoaded', app.onDOMContentLoaded, false);
+    // Wait for PhoneGap to load
+    document.addEventListener('deviceready', app.onDeviceReady, false);
+    </script>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.bsdmasterindex.pgb-simplified-media"
+        version     = "1.0.0"
+        versionCode = "10" >
+        <!-- https://build.phonegap.com/current-support -->
+        <preference name="phonegap-version" value="cli-7.0.1" />
+
+        <name>PGB Simplified Example Media plugin</name>
+        <description>PGB Simplified Example with Cordova 'Media' plugin using cli-7.0.1; less CSS, less Javascript</description>
+        <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
+        Jesse Monroy
+        </author>
+
+        <!-- Android SECTION -->
+        <platform name="android" />
+
+        <!-- PLUGINS PLUGINS -->
+        <!-- cordova-plugin-file & cordova-plugin-compat are loaded automatically by Phonegap Build -->
+        <plugin name="cordova-plugin-media" spec="~2.1.0" />
+
+    </widget>

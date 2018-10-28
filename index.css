@@ -1,0 +1,15 @@
+body {margin:0;font-size:large;}
+h3 {margin:0;}
+.height100percent {height:100%}
+.hidden {visibility:collapse;display:none;}
+.expose {visibility:visible;display:block;} /* Here for completeness only. */
+#header {margin:0;padding:0;font-family:monospace;text-align:center;line-height:2.5em;border:1px solid black;}   
+#icon {float:left;}
+#copyright {font-style:italic;font-size:small;}
+#imgCamera {float:right;height:16px;width:16px;padding:0.1em 0.5em;}
+#imgLocalStore {float:right;height:16px;width:16px;padding:0.1em 0.5em;}
+
+#exitApp {margin:0.1em;float:right;font-size:0.9em;}
+#getImage {float:left;font-size:0.9em;margin:0 0.5em;margin:0 45%;}
+
+#theImage {margin:0;padding:0;}
