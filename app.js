@@ -4,6 +4,12 @@ var app = {
     isCordovaApp : false,
     isCameraAvailable : false,
 
+    //
+    cameraCallback (imageData) {
+        var image = document.getElementById('theImage');
+        image.src = "data:image/jpeg;base64," + imageData;
+        document.getElementById('status').innerHTML = "Got Image.";
+    },
     // trap our buttons, and remove the delay with `FastClick()`
     hook : function () {
         new FastClick(document.body);
@@ -17,6 +23,10 @@ var app = {
                 setTimeout(cameraPlugin.getPicture, 200);
             },
             false);
+        //
+        // link our callback
+        // NOTE: This is a javascript trick.
+        cameraPlugin.onSuccess = app.cameraCallback;
     },
     //
     onDOMContentLoaded : function () {

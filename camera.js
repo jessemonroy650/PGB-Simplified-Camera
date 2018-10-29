@@ -17,9 +17,8 @@ var cameraPlugin = {
     },
     //
     // When using `data:`, it is required that `data:` be included in the `Content-Security-Policy`
+    // NOTE: This method can be overridden in the the main app.
     onSuccess : function (imageData) {
-        var image = document.getElementById('theImage');
-        image.src = "data:image/jpeg;base64," + imageData;
     },
     //
     onFail : function (message) {
