@@ -3,9 +3,8 @@ var app = {
     eventTarget : 'click',
     isCordovaApp : false,
     isCameraAvailable : false,
-    isStorageAvailable : false,
 
-    //
+    // trap our buttons, and remove the delay with `FastClick()`
     hook : function () {
         new FastClick(document.body);
         document.getElementById('exitApp').addEventListener(app.eventTarget,
@@ -14,7 +13,8 @@ var app = {
         document.getElementById('getImage').addEventListener(app.eventTarget,
             function () {
                 document.getElementById('status').innerHTML = "Getting Camera ... ";
-                cameraPlugin.getPicture()
+                // use a short timeout, text does not display
+                setTimeout(cameraPlugin.getPicture, 200);
             },
             false);
     },
@@ -23,16 +23,6 @@ var app = {
         app.hook();
         //
         document.getElementById('appVersion').innerHTML   = app.version;
-        //
-        // check for available storage
-        //
-        app.isStorageAvailable = localStore.isStorageAvailable('localStorage');
-        document.getElementById('status1').innerHTML = app.isStorageAvailable;
-        if (app.isStorageAvailable) {
-            document.getElementById('imgLocalStore').className = 'expose';
-        } else {
-            document.getElementById('imgLocalStore').className = 'hidden';
-        }
     },
     //
     onDeviceReady : function () {
@@ -43,10 +33,10 @@ var app = {
         //
         // check for camera
         //
-        app.isCameraAvailable  = cameraPlugin.isCameraAvailable();
+        app.isCameraAvailable = cameraPlugin.isCameraAvailable();
+        // expose or hide the "camera.png" icon 
         document.getElementById('status2').innerHTML = app.isCameraAvailable;
         if (app.isCameraAvailable) {
-            cameraPlugin.init('theImage');
             document.getElementById('imgCamera').className = 'expose';
         } else {
             document.getElementById('imgCamera').className = 'hidden';
