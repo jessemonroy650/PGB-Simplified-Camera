@@ -9,17 +9,13 @@
         <preference name="phonegap-version" value="cli-7.1.0" />
 
         <name>PGB Simplified Example Camera plugin</name>
-        <description>PGB Simplified Example Cordova 'Camera' plugin using cli-6.0.0; less CSS, less Javascript </description>
-        <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
-        Jesse Monroy
-        </author>
+        <description>PGB Simplified Example Cordova 'Camera' plugin using cli-7.1.0; less CSS, less Javascript </description>
+        <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">Jesse Monroy</author>
 
         <!-- Android SECTION -->
         <platform name="android" />
 
         <!-- PLUGINS PLUGINS -->
-        <!-- cordova-plugin-file & cordova-plugin-compat are loaded automatically by Phonegap Build -->
-        <plugin name="cordova-plugin-device" spec="~2.0.2" />
         <plugin name="cordova-plugin-camera" spec="~4.0.3" />
 
     </widget>

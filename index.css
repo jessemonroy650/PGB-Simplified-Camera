@@ -5,8 +5,9 @@ h3 {margin:0;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .spacer {clear:both;}
 #header {margin:0;padding:0;font-family:monospace;text-align:center;line-height:2.5em;border:1px solid black;} 
-#icon {float:left;}
 #copyright {font-style:italic;font-size:small;}
+/* icon images */
+#icon {float:left;}
 #imgCamera {float:right;height:16px;width:16px;padding:0.1em 0.5em;}
 /* buttons */
 #exitApp {float:right;font-size:0.9em;margin:0.1em;}

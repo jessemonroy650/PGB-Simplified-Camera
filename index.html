@@ -9,9 +9,9 @@
                       script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" charset="utf-8" src="fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8" src="camera.js"></script>
-    <script type="text/javascript" charset="utf-8" src="fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="app.js"></script>
 </head>
 <body class=height100percent>
@@ -21,11 +21,9 @@
         <button id=exitApp>Exit</button>
     </div>
     <div style="clear:both;">
-        <img title="camera available" id="imgCamera" src=camera.png>
-
+        <img title="camera available" id=imgCamera src=camera.png>
         <h3>v<span id=appVersion></span></h3>
         <button id=getImage>get&nbsp;image</button>
-
     </div>
 
     <div class=spacer />

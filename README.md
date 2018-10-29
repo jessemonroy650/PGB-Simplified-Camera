@@ -1,12 +1,13 @@
 # PGB-Simplified-Camera
 PGB Simplified Example Cordova 'Camera' plugin using `cli-7.1.0` with less CSS, less Javascript 
 
+* https://www.npmjs.com/package/cordova-plugin-camera
 
-https://www.npmjs.com/package/cordova-plugin-camera
-
-**NOTE** When using `DATA_URL`, make sure to add `data:` to the `Content-Security-Policy` in the header
+**NOTE** When using `DATA_URL`, make sure to add `data:` to the `Content-Security-Policy`.
 
 ## Minimum Use
+
+This is straight from the documentation.
 
 ```
 document.addEventListener("deviceready", onDeviceReady, false);
