@@ -33,25 +33,3 @@ function onFail(message) {
     alert('Failed because: ' + message);
 }
 ```
-
-## API Reference
-
-* camera
-  * .getPicture(successCallback, errorCallback, options)
-  * .cleanup()
-  * .onError : function
-  * .onSuccess : function
-  * .CameraOptions : Object
-
-* Camera
-  * .DestinationType : enum
-  * .EncodingType : enum
-  * .MediaType : enum
-  * .PictureSourceType : enum
-  * .PopoverArrowDirection : enum
-  * .Direction : enum
-
-* CameraPopoverHandle
-
-* CameraPopoverOptions
-
